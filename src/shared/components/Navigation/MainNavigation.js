@@ -1,14 +1,14 @@
-import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import MainHeader from "./MainHeader";
-import "./MainNavigation.css";
-import NavLinks from "./NavLinks";
-import SideDrawer from "./SideDrawer";
+import MainHeader from './MainHeader';
+import NavLinks from './NavLinks';
+import SideDrawer from './SideDrawer';
+import './MainNavigation.css';
 
-const MainNavigation = (props) => {
+const MainNavigation = props => {
   return (
-    <Fragment>
+    <React.Fragment>
       <SideDrawer>
         <nav className="main-navigation__drawer-nav">
           <NavLinks />
@@ -27,7 +27,7 @@ const MainNavigation = (props) => {
           <NavLinks />
         </nav>
       </MainHeader>
-    </Fragment>
+    </React.Fragment>
   );
 };
 

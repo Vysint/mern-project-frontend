@@ -1,28 +1,29 @@
-import React from "react";
+import React from 'react';
 import {
   BrowserRouter as Router,
-  Redirect,
   Route,
-  Switch,
-} from "react-router-dom";
-import NewPlace from "./places/pages/NewPlace";
-import Users from "./user/pages/Users";
-import MainNavigation from "./shared/components/Navigation/MainNavigation";
+  Redirect,
+  Switch
+} from 'react-router-dom';
+
+import Users from './user/pages/Users';
+import NewPlace from './places/pages/NewPlace';
+import MainNavigation from './shared/components/Navigation/MainNavigation';
 
 const App = () => {
   return (
     <Router>
       <MainNavigation />
       <main>
-      <Switch>
-        <Route path="/" exact>
-          <Users />
-        </Route>
-        <Route path="/places/new" exact>
-          <NewPlace />
-        </Route>
-        <Redirect path="/" />
-      </Switch>
+        <Switch>
+          <Route path="/" exact>
+            <Users />
+          </Route>
+          <Route path="/places/new" exact>
+            <NewPlace />
+          </Route>
+          <Redirect to="/" />
+        </Switch>
       </main>
     </Router>
   );
