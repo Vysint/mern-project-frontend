@@ -85,8 +85,8 @@ const Auth = () => {
     } else {
       try {
         const formData = new FormData();
-        formData.append("name", formState.inputs.name.value);
         formData.append("email", formState.inputs.email.value);
+        formData.append("name", formState.inputs.name.value);
         formData.append("password", formState.inputs.password.value);
         formData.append("image", formState.inputs.image.value);
         const responseData = await sendRequest(
